@@ -8,7 +8,7 @@ Each article has its own branch with complete, runnable code. Start from Part 1 
 
 | Part | Title | Branch | Article |
 |------|-------|--------|---------|
-| 01 | Your First AI Agent | [`01-hello-adk`](https://github.com/gazzumatteo/adk-from-zero/tree/01-hello-adk) | *coming soon* |
+| 01 | Your First AI Agent | [`01-hello-adk`](https://github.com/gazzumatteo/adk-from-zero/tree/01-hello-adk) | [Read on Medium](https://blog.gazzurelli.com/how-to-build-your-first-ai-agent-with-google-adk-6c5027fda111) |
 | 02 | Teaching Agents to Act | *coming soon* | *coming soon* |
 | 03 | Building Agent Teams | *coming soon* | *coming soon* |
 | 04 | Visual Workflows with ADK 2.0 | *coming soon* | *coming soon* |
