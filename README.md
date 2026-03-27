@@ -72,7 +72,7 @@ This launches a local web interface where you can interact with the agent visual
 
 ## Article
 
-📖 Read the full article on Medium: *coming soon*
+📖 Read the full article on Medium: [How to Build Your First AI Agent with Google ADK](https://blog.gazzurelli.com/how-to-build-your-first-ai-agent-with-google-adk-6c5027fda111)
 
 ---
 
