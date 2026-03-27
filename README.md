@@ -1,0 +1,72 @@
+# Google ADK: From 0 to Agentic AI
+
+A hands-on, 12-part article series that walks you through building production-grade AI agents with [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/).
+
+Each article has its own branch with complete, runnable code. Start from Part 1 and build your way up — or jump to any topic that interests you.
+
+## The Series
+
+| Part | Title | Branch | Article |
+|------|-------|--------|---------|
+| 01 | Your First AI Agent | [`01-hello-adk`](https://github.com/gazzumatteo/adk-from-zero/tree/01-hello-adk) | *coming soon* |
+| 02 | Teaching Agents to Act | *coming soon* | *coming soon* |
+| 03 | Building Agent Teams | *coming soon* | *coming soon* |
+| 04 | Visual Workflows with ADK 2.0 | *coming soon* | *coming soon* |
+| 05 | Agents That Remember | *coming soon* | *coming soon* |
+| 06 | The Company Knowledge Base | *coming soon* | *coming soon* |
+| 07 | The Universal Tool Protocol | *coming soon* | *coming soon* |
+| 08 | Cross-Company Agent Collaboration | *coming soon* | *coming soon* |
+| 09 | Beyond Chat: Generative UI | *coming soon* | *coming soon* |
+| 10 | Streaming Agents to Your Frontend | *coming soon* | *coming soon* |
+| 11 | Agents That Create Agents | *coming soon* | *coming soon* |
+| 12 | From Laptop to Cloud | *coming soon* | *coming soon* |
+
+## Quick Start
+
+Each branch contains a self-contained project. To run any part:
+
+```bash
+# Clone the repo
+git clone https://github.com/gazzumatteo/adk-from-zero.git
+cd adk-from-zero
+
+# Switch to a specific part
+git checkout 01-hello-adk
+
+# Setup
+cp .env.example .env
+# Edit .env and add your GOOGLE_API_KEY (get one at https://ai.google.dev/)
+
+# Install and run
+pip install -r requirements.txt
+python main.py
+```
+
+## What You'll Build
+
+This series uses a **manufacturing company scenario** as a running example. You start with a simple receptionist agent and progressively add capabilities — tools, multi-agent orchestration, memory, RAG, protocol integrations, and production deployment — until you have a complete, enterprise-grade agentic system.
+
+## Prerequisites
+
+- Python 3.11+
+- A Google API Key ([get one here](https://ai.google.dev/))
+- Basic Python knowledge
+
+## Tech Stack
+
+- [Google ADK](https://google.github.io/adk-docs/) — Agent framework
+- [Gemini](https://ai.google.dev/) — LLM backbone
+- Python 3.11+
+
+## Author
+
+**Matteo Gazzurelli** — Fractional CTO & Agentic AI Consultant
+
+- [ai.gazzurelli.com](https://ai.gazzurelli.com)
+- [LinkedIn](https://linkedin.com/in/matteogazzurelli)
+- [Medium](https://medium.com/@matteogazzurelli)
+- [X/Twitter](https://x.com/gazzumatteo)
+
+## License
+
+This project is licensed under the Apache 2.0 License — see the [LICENSE](LICENSE) file for details.
