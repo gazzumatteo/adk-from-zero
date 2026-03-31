@@ -9,17 +9,17 @@ Each article has its own branch with complete, runnable code. Start from Part 1 
 | Part | Title | Branch | Article |
 |------|-------|--------|---------|
 | 01 | Your First AI Agent | [`01-hello-adk`](https://github.com/gazzumatteo/adk-from-zero/tree/01-hello-adk) | [Read on Medium](https://blog.gazzurelli.com/how-to-build-your-first-ai-agent-with-google-adk-6c5027fda111) |
-| 02 | Teaching Agents to Act | *coming soon* | *coming soon* |
-| 03 | Building Agent Teams | *coming soon* | *coming soon* |
-| 04 | Visual Workflows with ADK 2.0 | *coming soon* | *coming soon* |
-| 05 | Agents That Remember | *coming soon* | *coming soon* |
-| 06 | The Company Knowledge Base | *coming soon* | *coming soon* |
-| 07 | The Universal Tool Protocol | *coming soon* | *coming soon* |
-| 08 | Cross-Company Agent Collaboration | *coming soon* | *coming soon* |
-| 09 | Beyond Chat: Generative UI | *coming soon* | *coming soon* |
-| 10 | Streaming Agents to Your Frontend | *coming soon* | *coming soon* |
-| 11 | Agents That Create Agents | *coming soon* | *coming soon* |
-| 12 | From Laptop to Cloud | *coming soon* | *coming soon* |
+| 02 | Teaching Agents to Act | [`02-tools-and-functions`](https://github.com/gazzumatteo/adk-from-zero/tree/02-tools-and-functions) | *coming soon* |
+| 03 | Building Agent Teams | [`03-multi-agent-teams`](https://github.com/gazzumatteo/adk-from-zero/tree/03-multi-agent-teams) | *coming soon* |
+| 04 | Visual Workflows with ADK 2.0 | [`04-adk-2-workflows`](https://github.com/gazzumatteo/adk-from-zero/tree/04-adk-2-workflows) | *coming soon* |
+| 05 | Agents That Remember | [`05-memory-and-context`](https://github.com/gazzumatteo/adk-from-zero/tree/05-memory-and-context) | *coming soon* |
+| 06 | The Company Knowledge Base | [`06-enterprise-rag`](https://github.com/gazzumatteo/adk-from-zero/tree/06-enterprise-rag) | *coming soon* |
+| 07 | The Universal Tool Protocol | [`07-mcp-tools`](https://github.com/gazzumatteo/adk-from-zero/tree/07-mcp-tools) | *coming soon* |
+| 08 | Cross-Company Agent Collaboration | [`08-a2a-protocol`](https://github.com/gazzumatteo/adk-from-zero/tree/08-a2a-protocol) | *coming soon* |
+| 09 | Beyond Chat: Generative UI | [`09-a2ui-generative-ui`](https://github.com/gazzumatteo/adk-from-zero/tree/09-a2ui-generative-ui) | *coming soon* |
+| 10 | Streaming Agents to Your Frontend | [`10-ag-ui-frontend`](https://github.com/gazzumatteo/adk-from-zero/tree/10-ag-ui-frontend) | *coming soon* |
+| 11 | Agents That Create Agents | [`11-dynamic-agent-factory`](https://github.com/gazzumatteo/adk-from-zero/tree/11-dynamic-agent-factory) | *coming soon* |
+| 12 | From Laptop to Cloud | [`12-production-deploy`](https://github.com/gazzumatteo/adk-from-zero/tree/12-production-deploy) | *coming soon* |
 
 ## Quick Start
 
