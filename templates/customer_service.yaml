@@ -1,0 +1,48 @@
+# Customer Service Agent Template
+# Article 11: Dynamic Agent Factory
+
+name: "Customer-Service-{id}"
+role: "customer_service"
+description: "Handles customer inquiries and support tickets"
+
+capabilities:
+  - "handle_inquiries"
+  - "resolve_issues"
+  - "escalate_problems"
+  - "provide_support"
+  - "track_tickets"
+
+model: "gemini-3-flash-preview"
+
+configuration:
+  temperature: 0.6
+  max_tokens: 1500
+  escalation_threshold: 3
+  response_style: "friendly"
+  response_timeout: "5m"
+
+tools:
+  - name: "search_knowledge_base"
+    description: "Search support knowledge base"
+  - name: "get_customer_history"
+    description: "Get customer interaction history"
+  - name: "create_ticket"
+    description: "Create support ticket"
+  - name: "update_ticket"
+    description: "Update support ticket status"
+  - name: "escalate_ticket"
+    description: "Escalate to human agent"
+
+support_config:
+  working_hours: "24/7"
+  languages: ["en", "es", "fr"]
+  max_resolution_time: "24h"
+  satisfaction_target: 0.95
+
+metadata:
+  created_by: "factory"
+  version: "1.0"
+  tags:
+    - "customer-service"
+    - "support"
+    - "tickets"

@@ -1,0 +1,44 @@
+# Quality Monitor Agent Template
+# Article 11: Dynamic Agent Factory
+
+name: "Quality-Monitor-{id}"
+role: "quality_monitor"
+description: "Monitors production quality metrics and alerts on issues"
+
+capabilities:
+  - "monitor_defect_rates"
+  - "analyze_quality_trends"
+  - "generate_quality_alerts"
+  - "produce_quality_reports"
+
+model: "gemini-3-flash-preview"
+
+configuration:
+  temperature: 0.5
+  max_tokens: 2000
+  alerts_enabled: true
+  report_frequency: "daily"
+  defect_threshold: 0.5  # Alert when defect rate exceeds 0.5%
+
+tools:
+  - name: "get_defect_metrics"
+    description: "Get current defect rates and quality metrics"
+  - name: "check_compliance"
+    description: "Check compliance with quality standards"
+  - name: "generate_quality_report"
+    description: "Generate quality assurance report"
+  - name: "trigger_alert"
+    description: "Send quality alert to management"
+
+schedule:
+  health_check_interval: "5m"
+  report_interval: "1d"
+  alert_cooldown: "30m"
+
+metadata:
+  created_by: "factory"
+  version: "1.0"
+  tags:
+    - "quality"
+    - "monitoring"
+    - "alerts"
