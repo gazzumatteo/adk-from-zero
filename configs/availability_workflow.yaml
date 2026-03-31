@@ -1,0 +1,152 @@
+# Availability Workflow with Conditional Branching
+# Demonstrates workflow graph with decision points and routing
+
+workflow:
+  name: resource_availability_check
+  version: "2.0"
+  description: Workflow to check resource availability with conditional branching
+
+  # Define the workflow graph
+  graph:
+    nodes:
+      - id: start
+        type: trigger
+        description: Workflow starts with availability check request
+
+      - id: check_inventory
+        type: agent_call
+        agent_name: inventory_checker
+        description: Check current inventory levels
+        inputs:
+          - from: start
+            mapping: request
+
+      - id: check_capacity
+        type: agent_call
+        agent_name: capacity_analyzer
+        description: Check production capacity
+        inputs:
+          - from: start
+            mapping: request
+
+      - id: combine_results
+        type: data_merge
+        description: Combine inventory and capacity results
+        inputs:
+          - from: check_inventory
+            mapping: inventory_status
+          - from: check_capacity
+            mapping: capacity_status
+
+      # Conditional branching based on availability
+      - id: is_available
+        type: condition
+        description: Determine if resources are available
+        condition: "combined.inventory_status == 'available' AND combined.capacity_status == 'sufficient'"
+
+      - id: fulfill_immediately
+        type: agent_call
+        agent_name: fulfillment_agent
+        description: Process immediate fulfillment
+        condition_path: true
+        inputs:
+          - from: combine_results
+            mapping: combined
+
+      - id: schedule_production
+        type: agent_call
+        agent_name: scheduler_agent
+        description: Schedule future production
+        condition_path: false
+        inputs:
+          - from: combine_results
+            mapping: combined
+
+      - id: notify_customer
+        type: agent_call
+        agent_name: notification_agent
+        description: Notify customer of availability and timeline
+        inputs:
+          - from: fulfill_immediately
+            mapping: fulfillment_details
+          - from: schedule_production
+            mapping: schedule_details
+
+      - id: end
+        type: output
+        description: Return final result
+        inputs:
+          - from: notify_customer
+            mapping: notification_result
+
+    # Edge definitions connecting nodes
+    edges:
+      - from: start
+        to: [check_inventory, check_capacity]
+        type: parallel
+
+      - from: check_inventory
+        to: combine_results
+
+      - from: check_capacity
+        to: combine_results
+
+      - from: combine_results
+        to: is_available
+
+      - from: is_available
+        to: [fulfill_immediately, schedule_production]
+        type: conditional
+
+      - from: fulfill_immediately
+        to: notify_customer
+
+      - from: schedule_production
+        to: notify_customer
+
+      - from: notify_customer
+        to: end
+
+  # Agent definitions referenced in nodes
+  agents:
+    inventory_checker:
+      model: gemini-3-flash-preview
+      description: Checks inventory system for product availability
+      instruction: |
+        Check the inventory database for the requested products.
+        Return: available quantity, location, condition.
+
+    capacity_analyzer:
+      model: gemini-3-flash-preview
+      description: Analyzes production capacity and constraints
+      instruction: |
+        Analyze current production capacity and constraints.
+        Return: available capacity, timeline, resource utilization.
+
+    fulfillment_agent:
+      model: gemini-3-flash-preview
+      description: Handles immediate order fulfillment
+      instruction: |
+        When resources are immediately available, process fulfillment.
+        Return: fulfillment confirmation and shipping details.
+
+    scheduler_agent:
+      model: gemini-3-flash-preview
+      description: Schedules future production and delivery
+      instruction: |
+        Schedule production for future delivery.
+        Return: production schedule and delivery timeline.
+
+    notification_agent:
+      model: gemini-3-flash-preview
+      description: Notifies customer of decision and timeline
+      instruction: |
+        Communicate availability status and timeline to customer.
+        Be clear, professional, and include all relevant dates.
+
+  # Execution parameters
+  parameters:
+    timeout_seconds: 300
+    retry_policy: exponential_backoff
+    max_retries: 3
+    logging_level: debug
