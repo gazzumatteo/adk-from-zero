@@ -1,0 +1,9 @@
+# Article 08: A2A Protocol
+# Python 3.11+
+
+google-adk[a2a]>=0.1.0
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+httpx>=0.24.0

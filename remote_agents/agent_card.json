@@ -1,0 +1,58 @@
+{
+  "name": "Logistics-Agent",
+  "description": "Specialized agent for logistics, shipment planning, and delivery coordination",
+  "version": "1.0.0",
+  "capabilities": [
+    {
+      "name": "plan_shipment",
+      "description": "Plan shipment logistics for an order",
+      "parameters": {
+        "order_id": {
+          "type": "string",
+          "description": "Order identifier"
+        },
+        "destination_address": {
+          "type": "string",
+          "description": "Delivery destination address"
+        },
+        "item_count": {
+          "type": "integer",
+          "description": "Number of items to ship"
+        }
+      }
+    },
+    {
+      "name": "get_tracking_status",
+      "description": "Get current tracking status for a shipment",
+      "parameters": {
+        "tracking_number": {
+          "type": "string",
+          "description": "Tracking number"
+        }
+      }
+    },
+    {
+      "name": "calculate_delivery_date",
+      "description": "Calculate expected delivery date based on origin, destination, and service level",
+      "parameters": {
+        "origin": {
+          "type": "string",
+          "description": "Shipment origin location"
+        },
+        "destination": {
+          "type": "string",
+          "description": "Shipment destination location"
+        },
+        "service_level": {
+          "type": "string",
+          "enum": ["standard", "express", "overnight"],
+          "description": "Delivery service level"
+        }
+      }
+    }
+  ],
+  "contact": {
+    "email": "logistics@company.com",
+    "url": "http://localhost:8001"
+  }
+}
