@@ -1,0 +1,9 @@
+# Article 07: MCP Tools Integration
+# Python 3.11+
+
+google-adk>=0.1.0
+mcp>=1.0.0
+fastmcp>=0.1.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+httpx>=0.24.0
