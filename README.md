@@ -1,8 +1,11 @@
 # Google ADK: From 0 to Agentic AI
 
-A hands-on, 12-part article series that walks you through building production-grade AI agents with [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/).
+A hands-on, 12-part article series that walks you through building production-grade AI agents with [Google Agent Development Kit (ADK)](https://adk.dev/).
 
 Each article has its own branch with complete, runnable code. Start from Part 1 and build your way up — or jump to any topic that interests you.
+
+> [!NOTE]
+> **2026 platform naming update:** Google ADK kept its name and code-first role. Google Cloud introduced Gemini Enterprise Agent Platform as the evolution of Vertex AI and the wider managed layer for building, scaling, governing and optimizing agents. Read [Google ADK in 2026: Where It Fits in Gemini Enterprise Agent Platform](https://gazzurelli.com/blog/google-adk-gemini-enterprise-agent-platform) for the current architecture map, including ADK Runtime versus managed Agent Runtime and the Cloud Run deployment path.
 
 ## The Series
 
@@ -54,7 +57,7 @@ This series uses a **manufacturing company scenario** as a running example. You 
 
 ## Tech Stack
 
-- [Google ADK](https://google.github.io/adk-docs/) — Agent framework
+- [Google ADK](https://adk.dev/) — Agent framework
 - [Gemini](https://ai.google.dev/) — LLM backbone
 - Python 3.11+
 
@@ -62,7 +65,7 @@ This series uses a **manufacturing company scenario** as a running example. You 
 
 **Matteo Gazzurelli** — Fractional CTO & Agentic AI Consultant
 
-- [ai.gazzurelli.com](https://ai.gazzurelli.com)
+- [gazzurelli.com](https://gazzurelli.com)
 - [LinkedIn](https://linkedin.com/in/matteogazzurelli)
 - [Medium](https://medium.com/@matteogazzurelli)
 - [X/Twitter](https://x.com/gazzumatteo)
